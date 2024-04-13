@@ -1,0 +1,22 @@
+{
+	"manifest_version": 3,
+	"name": "ニコタイチャット【YouTube|Twitch】",
+	"description": "ニコタイ用にチャットの入力部分を大きく表示できます。(ポップアウト時専用)",
+	"version": "1.0",
+	"icons": {
+		"128": "image/nama_key.png"
+	},
+	"content_scripts": [
+		{
+			"js": [
+				"script/dexie.js",
+				"script/micromodal.min.js",
+				"script/content-script.js"
+			],
+			"matches": [
+				"https://www.twitch.tv/popout/*chat*",
+				"https://www.youtube.com/live_chat?is_popout=1&v=*"
+			]
+		}
+	]
+}
